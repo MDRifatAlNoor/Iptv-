@@ -43,7 +43,7 @@
     "name": "Jamuna TV",
     "logo": "https://s3.aynaott.com/storage/aac6488b68844e5756ab46eb79659de8",
     "group": "News",
-    "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/index.m3u8",
+    "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/1701-audio_113312_eng=113200-video=2202800.m3u8",
     "verified_at": "2026-06-04T15:05:55.726795",
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
@@ -322,7 +322,7 @@
         "name": "T-SPORTS",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/T_Sports_logo.svg/500px-T_Sports_logo.svg.png",
         "group": "Sports",
-        "url": "https://198.195.239.50:8095/tsports/index.m3u8"
+        "url": "http://198.195.239.50:8095/tsports/tracks-v1a1/mono.m3u8"
     },
     {
     "name": "TSports HD",
@@ -338,13 +338,13 @@
         "name": "Somoy TV",
         "logo": "https://i.postimg.cc/Qxn4JFNV/20250529-071147.png",
         "group": "FIFA",
-        "url": "https://sm-monirul.top/toffee/play/somoy_tv.m3u8"
+        "url": "https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8"
     },
 {
         "name": "SATV",
         "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/SATV.png",
         "group": "Bangla",
-        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/1720.m3u8",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/1720-audio_113502_eng=113200-video=3224800.m3u8",
         "id": "satv-471"
     },
 {
@@ -365,13 +365,19 @@
     "name": "beIN SPORTS 4K",
     "group": "Sports",
     "logo": "",
-    "url": "http://go8knm.optikl.ink/X/index.php/Besyria3/video.m3u8"
+    "url": "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8"
   },
   {
     "name": "DSports",
     "group": "Sports",
     "logo": "",
-    "url": "http://147.135.114.221:8001/play/a00m/index.m3u8"
+    "url": "https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8"
+  },
+  {
+    "name": "Fox",
+    "group": "Sports",
+    "logo": "",
+    "url": "http://84.17.50.102/fox/index.m3u8"
   },
   {
     "name": "Willow Sports",
