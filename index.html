@@ -22,8 +22,6 @@
     --accent: #e11d48;
     --accent-hover: #be123c;
     --video-bg: #000000;
-    --sidebar-width: 220px;
-    --sidebar-collapsed: 60px;
     --navbar-height: 65px;
   }
 
@@ -72,6 +70,7 @@
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 0.6rem;
     flex-wrap: nowrap;
     backdrop-filter: blur(10px);
@@ -114,7 +113,7 @@
   }
 
   .navbar-brand {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--accent), #f97316);
     background-clip: text;
@@ -126,13 +125,14 @@
   .navbar-categories {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.6rem;
     flex-wrap: nowrap;
-    flex: 1;
     overflow-x: auto;
     padding: 0.2rem 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    flex: 1;
+    justify-content: center;
   }
 
   .navbar-categories::-webkit-scrollbar {
@@ -140,10 +140,10 @@
   }
 
   .navbar-label {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: var(--text-muted-dark);
-    margin-right: 0.2rem;
+    margin-right: 0.3rem;
     flex-shrink: 0;
     display: none;
   }
@@ -151,15 +151,16 @@
   .navbar-cat {
     background: var(--surface-dark);
     border: 1px solid var(--border-dark);
-    padding: 0.2rem 0.6rem;
+    padding: 0.3rem 0.9rem;
     border-radius: 2rem;
     cursor: pointer;
-    font-size: 0.65rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 700;
     transition: all 0.25s ease;
     color: var(--text-muted-dark);
     white-space: nowrap;
     flex-shrink: 0;
+    letter-spacing: 0.3px;
   }
 
   .navbar-cat:hover {
@@ -176,11 +177,11 @@
   }
 
   .navbar-cat .count {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
     opacity: 0.7;
-    margin-left: 0.15rem;
+    margin-left: 0.2rem;
     background: rgba(255,255,255,0.1);
-    padding: 0.03rem 0.35rem;
+    padding: 0.03rem 0.4rem;
     border-radius: 1rem;
   }
 
@@ -198,12 +199,12 @@
   .navbar-theme-btn {
     background: var(--surface-dark);
     border: 1px solid var(--border-dark);
-    padding: 0.25rem 0.7rem;
+    padding: 0.3rem 0.9rem;
     border-radius: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     color: var(--text-dark);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     transition: all 0.25s ease;
     white-space: nowrap;
   }
@@ -307,7 +308,72 @@
     display: block;
   }
 
-  /* ==================== FIXED VIDEO SCREEN ==================== */
+  /* ==================== DESKTOP TWO-COLUMN LAYOUT ==================== */
+  .main-content {
+    display: block;
+  }
+
+  /* Desktop: video left, channels right */
+  @media (min-width: 992px) {
+    .main-content {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .video-column {
+      flex: 0 0 55%;
+      min-width: 0;
+      position: sticky;
+      top: calc(var(--navbar-height) + 0.5rem);
+    }
+
+    .channels-column {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .video-card {
+      position: static;
+      margin-bottom: 0;
+    }
+
+    .channel-grid {
+      height: 560px;
+    }
+
+    .channels-section {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .video-column {
+      flex: 0 0 50%;
+    }
+    .channel-grid-inner {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Tablet: stacked but with more columns */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .channel-grid-inner {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .channel-grid {
+      height: 480px;
+    }
+  }
+
+  /* Mobile: single column grid */
+  @media (max-width: 480px) {
+    .channel-grid-inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ==================== VIDEO CARD ==================== */
   .video-card {
     position: sticky;
     top: calc(var(--navbar-height) + 0.5rem);
@@ -476,10 +542,9 @@
     position: relative;
   }
 
-  @media (min-width: 500px) { .channel-grid-inner { grid-template-columns: repeat(3, 1fr); } }
-  @media (min-width: 768px) { .channel-grid-inner { grid-template-columns: repeat(4, 1fr); } }
-  @media (min-width: 992px) { .channel-grid-inner { grid-template-columns: repeat(5, 1fr); } }
-  @media (min-width: 1200px) { .channel-grid-inner { grid-template-columns: repeat(6, 1fr); } }
+  @media (min-width: 500px) and (max-width: 767px) { 
+    .channel-grid-inner { grid-template-columns: repeat(2, 1fr); } 
+  }
 
   .channel-card {
     background: var(--surface-dark);
@@ -676,7 +741,8 @@
   }
 
   /* ==================== RESPONSIVE ==================== */
-  @media (max-width: 992px) {
+  /* Navbar toggle visibility */
+  @media (max-width: 991px) {
     .navbar-toggle {
       display: flex;
     }
@@ -695,14 +761,32 @@
     .navbar-categories .navbar-label {
       display: none;
     }
+    /* Mobile: stacked layout */
+    .main-content {
+      display: block;
+    }
+    .video-column {
+      flex: none;
+      width: 100%;
+      position: static;
+    }
+    .channels-column {
+      flex: none;
+      width: 100%;
+    }
+    .video-card {
+      position: sticky;
+      top: calc(var(--navbar-height) + 0.3rem);
+      margin-bottom: 1.2rem;
+    }
+    .channel-grid {
+      height: 420px;
+    }
   }
 
   @media (max-width: 768px) {
     :root {
       --navbar-height: 55px;
-    }
-    .channel-grid-inner {
-      grid-template-columns: repeat(2, 1fr);
     }
     .navbar-brand {
       font-size: 0.9rem;
@@ -748,6 +832,9 @@
       padding: 0.5rem 0.8rem;
       font-size: 0.85rem;
     }
+    .channel-grid-inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 480px) {
@@ -786,7 +873,7 @@
     .navbar-brand { font-size: 0.7rem; }
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 992px) {
     .navbar-toggle {
       display: none;
     }
@@ -828,33 +915,40 @@
 
   <!-- ==================== MAIN CONTENT ==================== -->
   <div class="app-container">
-    <!-- FIXED VIDEO SCREEN -->
-    <div class="video-card">
-      <div class="video-wrapper">
-        <video id="videoPlayer" controls autoplay muted playsinline poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23111'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23666' font-size='20'%3ESelect a channel%3C/text%3E%3C/svg%3E"></video>
+    <div class="main-content">
+      <!-- VIDEO COLUMN (Left on desktop) -->
+      <div class="video-column">
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video id="videoPlayer" controls autoplay muted playsinline poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23111'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23666' font-size='20'%3ESelect a channel%3C/text%3E%3C/svg%3E"></video>
+          </div>
+          <div class="channel-info">
+            <h2><span id="currentChannelName">No Channel</span><span class="live-badge" id="liveBadge" style="display:none;">LIVE</span></h2>
+            <span style="font-size:0.65rem;opacity:0.7;">tap any channel</span>
+          </div>
+        </div>
       </div>
-      <div class="channel-info">
-        <h2><span id="currentChannelName">No Channel</span><span class="live-badge" id="liveBadge" style="display:none;">LIVE</span></h2>
-        <span style="font-size:0.65rem;opacity:0.7;">tap any channel</span>
-      </div>
-    </div>
 
-    <div class="channels-section">
-      <div class="channels-header">
-        <div class="tabs">
-          <div class="tab active" data-tab="all">All (<span id="allCount">0</span>)</div>
-          <div class="tab" data-tab="favs">Favs (<span id="favsCount">0</span>)</div>
-          <div class="tab" data-tab="recents">Recents (<span id="recentsCount">0</span>)</div>
+      <!-- CHANNELS COLUMN (Right on desktop) -->
+      <div class="channels-column">
+        <div class="channels-section">
+          <div class="channels-header">
+            <div class="tabs">
+              <div class="tab active" data-tab="all">All (<span id="allCount">0</span>)</div>
+              <div class="tab" data-tab="favs">Favs (<span id="favsCount">0</span>)</div>
+              <div class="tab" data-tab="recents">Recents (<span id="recentsCount">0</span>)</div>
+            </div>
+            <input type="text" class="search-box" id="searchInput" placeholder="Search channel..." autocomplete="off">
+            <div class="stats-bar">
+              <span>Channels</span>
+              <span id="filterResultInfo">loading...</span>
+              <button id="retryLoadBtn" class="retry-btn" style="display:none;">Retry</button>
+            </div>
+          </div>
+          <div class="channel-grid" id="channelListContainer">
+            <div class="loading-placeholder">Loading channels...</div>
+          </div>
         </div>
-        <input type="text" class="search-box" id="searchInput" placeholder="Search channel..." autocomplete="off">
-        <div class="stats-bar">
-          <span>Channels</span>
-          <span id="filterResultInfo">loading...</span>
-          <button id="retryLoadBtn" class="retry-btn" style="display:none;">Retry</button>
-        </div>
-      </div>
-      <div class="channel-grid" id="channelListContainer">
-        <div class="loading-placeholder">Loading channels...</div>
       </div>
     </div>
   </div>
