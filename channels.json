@@ -1,5 +1,5 @@
 [
-{
+  {
     "name": "Channel 9",
     "logo": "https://s3.aynaott.com/storage/a959f06b4fc9e1421f867b6c1601fe43",
     "group": "Bangla",
@@ -9,7 +9,7 @@
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
-{
+  {
     "name": "Duronto TV",
     "logo": "https://s3.aynaott.com/storage/51f1530c076c027e431bf18a49613f0b",
     "group": "Bangla",
@@ -19,7 +19,7 @@
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
-{
+  {
     "name": "BTV CTG",
     "logo": "https://s3.aynaott.com/storage/00da8a07fb26b2fb79359ee535e4c7bc",
     "group": "Bangla",
@@ -33,13 +33,13 @@
     "name": "Asian TV",
     "logo": "https://s3.aynaott.com/storage/5282cec3a2e9349b750540d658cf1b6c",
     "group": "Bangla",
-   "stream_url": "https://mtlivestream.com/hls/asian/ytlive/index.m3u8",
+    "stream_url": "https://mtlivestream.com/hls/asian/ytlive/index.m3u8",
     "status": "live",
     "verified_at": "2026-06-04T15:05:55.704735",
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
- {
+  {
     "name": "Jamuna TV",
     "logo": "https://s3.aynaott.com/storage/aac6488b68844e5756ab46eb79659de8",
     "group": "News",
@@ -48,7 +48,7 @@
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
- {
+  {
     "name": "NHK World",
     "logo": "https://s3.aynaott.com/storage/d969a37a7e1bbd49449ae092d34f0549",
     "group": "News",
@@ -78,13 +78,13 @@
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
-{
+  {
     "name": "Cartoon Network",
     "logo": "https://imglink.cc/cdn/48br-Lpr61.png",
     "stream_url": "https://s3.ideationtec.live/Cartoon_Network/Cartoon_Network.m3u8",
     "category": "Cartoon"
   },
- {
+  {
     "name": "Doraemon TV",
     "logo": "https://imglink.cc/cdn/rmNeL8f6NR.png",
     "stream_url": "https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8",
@@ -96,56 +96,25 @@
     "stream_url": "https://live20.bozztv.com/giatvplayout7/giatv-210728/tracks-v1a1/mono.ts.m3u8",
     "category": "Cartoon"
   },
- {
+  {
     "name": "Tom & Jerry TV",
     "logo": "https://imglink.cc/cdn/YkXRQgC4-_.jpg",
     "stream_url": "https://live20.bozztv.com/giatvplayout7/giatv-208314/tracks-v1a1/mono.ts.m3u8",
     "category": "Cartoon"
   },
-{
+  {
     "name": "Mr Bean Animated",
     "logo": "https://i.ibb.co.com/XfqV4B56/png-transparent-mr-bean-illustration-youtube-coloring-book-character-cartoon-mr-bean-television-chil.png",
     "stream_url": "https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8",
     "category": "Cartoon"
   },
-{
+  {
     "name": "Disney Channel",
     "logo": "https://s3.aynaott.com/storage/a0c74b576321da5aa33a69806401caf1",
     "group": "Kids",
     "url": "https://tvsen7.aynaott.com/disney/index.m3u8?e=1779283925&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=edae9ca94bed2313e48e56a9085b496d",
     "status": "live",
     "verified_at": "2026-06-04T15:05:57.468434",
-    "status_code": 200,
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  
-  {
-    "name": "Jalsha Movies HD",
-    "logo": "",
-    "group": "Other",
-    "url": "http://198.195.239.50:8095/JalshaMovies/index.m3u8",
-    "status": "live",
-    "verified_at": "2026-06-04T15:05:58.631564",
-    "status_code": 200,
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "name": "DISCOVERY HD",
-    "logo": "",
-    "group": "Other",
-    "url": "http://198.195.239.50:8095/Discovery/index.m3u8",
-    "status": "live",
-    "verified_at": "2026-06-04T15:05:58.666758",
-    "status_code": 200,
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "name": "CARTOON NETWORK HD",
-    "logo": "",
-    "group": "Other",
-    "url": "http://198.195.239.50:8095/CartoonNetwork/index.m3u8",
-    "status": "live",
-    "verified_at": "2026-06-04T15:05:58.677952",
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
@@ -156,38 +125,37 @@
     "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8",
     "id": "deeptotvhd-642"
   },
-{
+  {
     "name": "Star Jalsha",
     "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPZdDXbsGeDOGhPC-Og7bXRrJxsbaFnZ1IEVB7-bPsJtpvNE9IhcMv0Q5OnUq5GCK9UqE7mzMCZinQaN1NSjk2wqKQFs_dreX5yGnDiXNju5yYT_9BDLC3dThhXRIfKk5XQGNc4oi6qWO3fvw5-9dqydLf6pvyHsq5cske3F1FKKih75cCUk20OKVymg/s600/Nur_20251216_222101_0000.png",
     "group": "Drama",
     "url": "https://tvsen3.aynaott.com/n64PH4YL/index.m3u8"
   },
- {
+  {
     "name": "Islamic TV",
     "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRXM2J7y2LkoE63vv2He9SF1dMo3pS9hmEC23wzJv3maIccQ1e912eTGNSN74Riwx03whZi5tyKXHKEDSFl4AO1JrwjCIlMhglN-nOjmGhBHBnhp1EqdLB5hwV3jHgKUDlzNFW1Cv8qrMylfmiIosSwFmK72-h-LTinSr1bpDVfNm1p8SlrILxKesdgw/s1080/1000008187.png",
     "group": "Islamic",
     "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamictvbd.stream/tracks-v1a1/mono.m3u8"
   },
- {
+  {
     "name": "Gopal Bhar",
     "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWh27tjd1FNVAOPSX0USYijfaEyINTkfaG0cPk8rzg61aDbyXSp2tBqxIb84p8UyhJLLNiDNC59fZD90u2gn52piHfUmy-ULyeZbf_mkRGvJKVKdwLYSOPiLEQJV2p8uvgVK-PB8ADIGcGotQOnNqrp4gTasKVqoxJ3sbt-77SeKqG-0frt2nLktDXlw/s600/Nur_20251216_230322_0000.png",
     "group": "Kids",
     "url": "https://live20.bozztv.com/giatvplayout7/giatv-209611/tracks-v1a1/mono.ts.m3u8"
   },
- {
+  {
     "name": "Cartoon Network PK",
     "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2_Oo4wyPeRJLk6Qx2LR-qkU7yUMefWJePaqWug6mf0BpN9c-JOnMtXrlahIdhb20vUfRAVmne71FSD3RUY_is9kr7fWe5K0Yd33IDt-mAC75fv7cfe49rOlV-a-JF5T1_7XV16ayq1hf2yg018vibmqvuCTigY3ZQn0G00e_Dxl7gZy8a1LZ6C-SAvg/s600/Nur_20251222_155548_0000.png",
     "group": "Kids",
     "url": "https://s3.ideationtec.live/Cartoon_Network/Cartoon_Network.m3u8"
   },
-
-{
+  {
     "name": "TenSports",
     "logo": "https://wapka-img.zuna.id/785a58ff.png",
     "group": "PSL-2026",
     "url": "https://cdn.dadocric.st/embed2.php?id=tensp"
   },
- {
+  {
     "name": "Channel 24",
     "logo": "https://yt3.googleusercontent.com/8Q8MCd6ypr2Hzbp60VE_stJPl063kQYfeTxdIQkAXRfhdzxByLl0sJYHsk43uTM4W_cOzwcbPQ=s160-c-k-c0x00ffffff-no-rj",
     "group": "Bangla News",
@@ -195,27 +163,27 @@
     "id": "bdchannel24-11"
   },
   {
-        "name": "FIFA+ United States (720p)",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
-        "group": "Sports",
-        "url": "https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-of5cbk3sav3w5/v1/sysdata_s_p_a_fifa_7/samsungheadend_us/latest/main/hls/playlist.m3u8",
-        "tvg_id": "FIFAPlus.uk@UnitedStates",
-        "status": "live",
-        "verified_at": "2026-06-04T15:14:39.638063",
-        "status_code": 200,
-        "content_type": "application/vnd.apple.mpegurl"
-    },
+    "name": "FIFA+ United States (720p)",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "group": "Sports",
+    "url": "https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-of5cbk3sav3w5/v1/sysdata_s_p_a_fifa_7/samsungheadend_us/latest/main/hls/playlist.m3u8",
+    "tvg_id": "FIFAPlus.uk@UnitedStates",
+    "status": "live",
+    "verified_at": "2026-06-04T15:14:39.638063",
+    "status_code": 200,
+    "content_type": "application/vnd.apple.mpegurl"
+  },
   {
-        "name": "FTF Sports (720p)",
-        "logo": "https://i.imgur.com/yvUjOI3.png",
-        "group": "Sports",
-        "url": "https://1657061170.rsc.cdn77.org/HLS/FTF-LINEAR.m3u8",
-        "tvg_id": "FTFSports.us@SD",
-        "status": "live",
-        "verified_at": "2026-06-04T15:14:57.145332",
-        "status_code": 200,
-        "content_type": "application/vnd.apple.mpegurl"
-    },
+    "name": "FTF Sports (720p)",
+    "logo": "https://i.imgur.com/yvUjOI3.png",
+    "group": "Sports",
+    "url": "https://1657061170.rsc.cdn77.org/HLS/FTF-LINEAR.m3u8",
+    "tvg_id": "FTFSports.us@SD",
+    "status": "live",
+    "verified_at": "2026-06-04T15:14:57.145332",
+    "status_code": 200,
+    "content_type": "application/vnd.apple.mpegurl"
+  },
   {
     "name": "Gazi TV",
     "logo": "https://s3.aynaott.com/storage/417a833f6d83021c99bfc3d4176610f4",
@@ -226,7 +194,7 @@
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
- {
+  {
     "name": "Channel I",
     "logo": "https://s3.aynaott.com/storage/8e998f20a9cc52cb8eb1f52a5bf38204",
     "group": "Bangla",
@@ -236,8 +204,7 @@
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
- 
-{
+  {
     "name": "Somoy News TV",
     "logo": "https://s3.aynaott.com/storage/ece71c1163a377fbe2d93f9d28c34f60",
     "group": "News",
@@ -247,7 +214,7 @@
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
-{
+  {
     "name": "TSN 1",
     "logo": "https://s3.aynaott.com/storage/59fe7ff434fed04ecec29b4d737ebc95",
     "group": "Sports",
@@ -257,109 +224,33 @@
     "status_code": 200,
     "content_type": "application/vnd.apple.mpegurl"
   },
- {
-    "name": "Disney XD",
-    "logo": "https://s3.aynaott.com/storage/f9b945284524683f1de8beb07ded8989",
-    "group": "Kids",
-    "url": "https://tvsen5.aynaott.com/disneyxd/index.m3u8?e=1779283925&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=ffdc9b78c58295f55906f225a10a425c",
-    "status": "live",
-    "verified_at": "2026-06-04T15:05:57.469896",
-    "status_code": 200,
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-{
-    "name": "STAR MOVIES HD",
-    "logo": "",
-    "group": "Other",
-    "url": "http://198.195.239.50:8095/StarMovies/index.m3u8"
-  },
-{
-    "name": "DISCOVERY HD",
-    "logo": "",
-    "group": "Other",
-    "url": "http://198.195.239.50:8095/Discovery/index.m3u8",
-    "status": "live",
-    "verified_at": "2026-06-04T15:05:58.666758",
-    "status_code": 200,
-    "content_type": "application/vnd.apple.mpegurl"
-  },
- {
-    "name": "Discovery Channel",
-    "logo": "https://i.imgur.com/5IxIFJ0.png",
-    "group": "Italy",
-    "url": "https://d24aqelmrau4kx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-l1oas691aj7p2/WBTV_IT.m3u8",
-    "tvg_id": "DiscoveryChannel.it",
-    "tvg_name": "Discovery Channel",
-    "tvg_country": "IT",
-    "tvg_chno": "37",
-    "status": "live",
-    "verified_at": "2026-06-04T15:07:41.313428",
-    "status_code": 200,
-    "content_type": "application/vnd.apple.mpegurl"
-  },
- {
-    "name": "Star Sports 1 HD",
-    "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Star%20Sports%201%40.jpeg",
-    "group": "Sports",
-    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
-    "id": "starsports1hd-536"
-  },
- {
-    "name": "Football World Cup 2026",
-    "logo": "https://carboncredits.com/wp-content/uploads/2025/09/shutterstock_2306088965-e1757112807302.jpg",
-    "group": "Football World Cup 2026",
-    "url": "http://198.195.239.50:8095/PTV-kutta/video.m3u8",
-    "id": "footballworldcup2026-444"
-  },
- {
+ 
+  {
     "name": "0. Doraemon",
     "logo": "https://static.wikia.nocookie.net/logopedia/images/e/e4/Doraemon2005.svg",
     "group": "Kids",
     "url": "https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8",
     "id": "0doraemon-421"
   },
- {
-        "name": "T-SPORTS",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/T_Sports_logo.svg/500px-T_Sports_logo.svg.png",
-        "group": "Sports",
-        "url": "http://198.195.239.50:8095/tsports/tracks-v1a1/mono.m3u8"
-    },
-    {
-    "name": "TSports HD",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/T_Sports_logo.svg/500px-T_Sports_logo.svg.png",
-    "group": "Sports",
-    "url": "http://198.195.239.50:8095/tsports/index.m3u8",
-    "status": "live",
-    "verified_at": "2026-06-04T15:05:58.571617",
-    "status_code": 200,
-    "content_type": "application/vnd.apple.mpegurl"
+  {
+    "name": "Somoy TV",
+    "logo": "https://i.postimg.cc/Qxn4JFNV/20250529-071147.png",
+    "group": "FIFA",
+    "url": "https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8"
   },
   {
-        "name": "Somoy TV",
-        "logo": "https://i.postimg.cc/Qxn4JFNV/20250529-071147.png",
-        "group": "FIFA",
-        "url": "https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8"
-    },
-{
-        "name": "SATV",
-        "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/SATV.png",
-        "group": "Bangla",
-        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/1720-audio_113502_eng=113200-video=3224800.m3u8",
-        "id": "satv-471"
-    },
-{
-        "name": "SONY AATH HD",
-        "logo": "https://static.wikia.nocookie.net/logopedia/images/0/00/SONY_AATH.png",
-        "group": "Bangla",
-        "url": "https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8",
-        "id": "sonyaathhd-62"
-    },
-    
+    "name": "SATV",
+    "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/SATV.png",
+    "group": "Bangla",
+    "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/1720-audio_113502_eng=113200-video=3224800.m3u8",
+    "id": "satv-471"
+  },
   {
-    "name": "Star Sports 1 HD",
-    "group": "Sports",
-    "logo": "",
-    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8"
+    "name": "SONY AATH HD",
+    "logo": "https://static.wikia.nocookie.net/logopedia/images/0/00/SONY_AATH.png",
+    "group": "Bangla",
+    "url": "https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8",
+    "id": "sonyaathhd-62"
   },
   {
     "name": "beIN SPORTS 4K",
@@ -374,47 +265,9 @@
     "url": "https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8"
   },
   {
-    "name": "Fox",
-    "group": "Sports",
-    "logo": "",
-    "url": "http://84.17.50.102/fox/index.m3u8"
-  },
-  {
     "name": "Willow Sports",
     "group": "Sports",
     "logo": "",
     "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd"
-  },
-  {
-    "name": "Geo Super",
-    "group": "Sports",
-    "logo": "",
-    "url": "http://stalker.hakunamata.workers.dev/play/1100/index.m3u8"
-  },
-  {
-    "name": "ESPN",
-    "group": "Sports",
-    "logo": "",
-    "url": "http://181.118.158.103:8000/play/a038/index.m3u8"
-  },
-  {
-    "name": "DAZN 1",
-    "group": "Sports",
-    "logo": "",
-    "url": "http://znty.dyndns.org:5010/hls/eleven1.m3u8"
-  },
-  {
-    "name": "Fox Sports",
-    "group": "Sports",
-    "logo": "",
-    "url": "http://23.237.104.106:8080/USA_FOX_DEPORTES/index.m3u8"
-  },
-  {
-    "name": "TyC Sports",
-    "group": "Sports",
-    "logo": "",
-    "url": "http://38.44.109.41:8003/play/a02l/index.m3u8"
   }
-
- 
-  ]
+]
