@@ -23,6 +23,7 @@
     --accent-hover: #be123c;
     --video-bg: #000000;
     --navbar-height: 65px;
+    --footer-height: 50px;
   }
 
   body.light {
@@ -44,6 +45,7 @@
     line-height: 1.5;
     transition: background 0.2s ease, color 0.2s ease;
     padding-top: var(--navbar-height);
+    padding-bottom: calc(var(--footer-height) + 0.5rem);
   }
 
   .app-container {
@@ -692,7 +694,7 @@
 
   .error-toast {
     position: fixed;
-    bottom: 20px;
+    bottom: calc(var(--footer-height) + 1rem);
     left: 50%;
     transform: translateX(-50%);
     background: var(--accent);
@@ -738,6 +740,42 @@
   .sidebar-mobile::-webkit-scrollbar-thumb {
     background: var(--accent);
     border-radius: 10px;
+  }
+
+  /* ==================== FIXED FOOTER ==================== */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+    color: var(--text-muted-dark);
+    border-top: 1px solid var(--border-dark);
+    background: var(--bg-dark);
+    backdrop-filter: blur(10px);
+    background: rgba(10, 15, 30, 0.92);
+    opacity: 0.85;
+    transition: opacity 0.3s ease, background 0.3s ease;
+    letter-spacing: 0.5px;
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body.light .footer {
+    background: rgba(241, 245, 249, 0.92);
+  }
+
+  .footer:hover {
+    opacity: 1;
+  }
+
+  .footer .heart {
+    color: var(--accent);
   }
 
   /* ==================== RESPONSIVE ==================== */
@@ -787,6 +825,7 @@
   @media (max-width: 768px) {
     :root {
       --navbar-height: 55px;
+      --footer-height: 42px;
     }
     .navbar-brand {
       font-size: 0.9rem;
@@ -835,11 +874,20 @@
     .channel-grid-inner {
       grid-template-columns: repeat(2, 1fr);
     }
+    .footer {
+      font-size: 0.65rem;
+      padding: 0.4rem 0.8rem;
+      height: var(--footer-height);
+    }
+    .error-toast {
+      bottom: calc(var(--footer-height) + 0.8rem);
+    }
   }
 
   @media (max-width: 480px) {
     :root {
       --navbar-height: 50px;
+      --footer-height: 36px;
     }
     .app-container { padding: 0 0.4rem 0.4rem 0.4rem; }
     .channel-grid { padding: 0.4rem 0.4rem 0.8rem 0.4rem; height: 360px; }
@@ -863,7 +911,8 @@
     .stats-bar { font-size: 0.65rem; }
     .retry-btn { font-size: 0.6rem; padding: 0.15rem 0.5rem; }
     .sidebar-mobile { width: 220px; min-width: 220px; padding: 1rem 0.8rem; }
-    .error-toast { font-size: 0.7rem; padding: 6px 14px; }
+    .error-toast { font-size: 0.7rem; padding: 6px 14px; bottom: calc(var(--footer-height) + 0.6rem); }
+    .footer { font-size: 0.55rem; padding: 0.3rem 0.6rem; height: var(--footer-height); }
   }
 
   @media (max-width: 360px) {
@@ -920,7 +969,7 @@
       <div class="video-column">
         <div class="video-card">
           <div class="video-wrapper">
-            <video id="videoPlayer" controls autoplay muted playsinline poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23111'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23666' font-size='20'%3ESelect a channel%3C/text%3E%3C/svg%3E"></video>
+            <video id="videoPlayer" controls autoplay muted playsinline preload="metadata" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23111'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23666' font-size='20'%3ESelect a channel%3C/text%3E%3C/svg%3E"></video>
           </div>
           <div class="channel-info">
             <h2><span id="currentChannelName">No Channel</span><span class="live-badge" id="liveBadge" style="display:none;">LIVE</span></h2>
@@ -951,6 +1000,12 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- ==================== FIXED FOOTER ==================== -->
+  <div class="footer">
+    Created by:<span style="font-weight:600; color:var(--text-dark);">Md Rifat Al Noor</span> 
+    
   </div>
 
   <div id="errorToast" class="error-toast"></div>
@@ -1318,6 +1373,7 @@
       wrapper.appendChild(cardDiv);
     }
 
+    // ==================== ENHANCED HLS DESTROY ====================
     function destroyHls() {
       if(currentHls) {
         try {
@@ -1329,6 +1385,7 @@
       }
     }
 
+    // ==================== ENHANCED PLAY CHANNEL ====================
     function playChannel(name, url) {
       if (currentPlayingName === name && currentPlayingUrl === url && !currentHls?.error) {
         return;
@@ -1354,25 +1411,58 @@
         const isHlsSupported = typeof Hls !== 'undefined' && Hls.isSupported && Hls.isSupported();
         
         if(url.includes('.m3u8') && isHlsSupported) {
-          currentHls = new Hls({ debug: false, enableWorker: true, lowLatencyMode: true });
+          // Enhanced HLS configuration
+          currentHls = new Hls({
+            enableWorker: true,
+            lowLatencyMode: true,
+            maxBufferLength: 30,
+            maxMaxBufferLength: 60,
+            liveSyncDurationCount: 3,
+            liveMaxLatencyDurationCount: 5,
+            backBufferLength: 30
+          });
+          
           currentHls.loadSource(url);
           currentHls.attachMedia(video);
           
+          // Auto quality selection - set to -1 for auto
           currentHls.on(Hls.Events.MANIFEST_PARSED, () => {
+            // Set auto quality selection
+            if (currentHls) {
+              currentHls.currentLevel = -1;
+            }
             video.play().catch(e => {
               console.log("Autoplay blocked:", e);
               showErrorToast("Tap video to start playback");
             });
           });
           
-          currentHls.on(Hls.Events.ERROR, (ev, data) => {
-            if(data.fatal) {
-              console.warn("HLS fatal error, trying direct play");
-              destroyHls();
-              video.src = url;
-              video.play().catch(() => handleStreamError());
+          // Enhanced error recovery
+          currentHls.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+              switch (data.type) {
+                case Hls.ErrorTypes.NETWORK_ERROR:
+                  // Try to recover network errors
+                  if (currentHls) {
+                    currentHls.startLoad();
+                  }
+                  break;
+                case Hls.ErrorTypes.MEDIA_ERROR:
+                  // Try to recover media errors
+                  if (currentHls) {
+                    currentHls.recoverMediaError();
+                  }
+                  break;
+                default:
+                  // For other fatal errors, destroy and try direct play
+                  destroyHls();
+                  video.src = url;
+                  video.play().catch(() => handleStreamError());
+                  break;
+              }
             }
           });
+          
         } else if (url.includes('.m3u8') && video.canPlayType('application/vnd.apple.mpegurl')) {
           video.src = url;
           video.play().catch(err => handleStreamError());
